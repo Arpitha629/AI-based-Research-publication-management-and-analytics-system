@@ -2,6 +2,7 @@ import pandas as pd
 import requests
 import re
 import json
+import os
 
 from analytics import generate_analytics
 from orcid_engine import get_orcid_profile
@@ -14,17 +15,29 @@ from scholar_engine import fetch_scholar_data
 SERP_API_KEY = "cd9fbf593d4ac6adb49007ea5438614eff594fb3be7e20298c8ece041a068212"
 
 # =====================================================
+# PROJECT PATHS (RENDER + LOCAL FIX)
+# =====================================================
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+DATA_DIR = os.path.join(
+    BASE_DIR,
+    "data"
+)
+
+# =====================================================
 # LOAD FACULTY DATABASE
 # =====================================================
 
-FACULTY_JSON_PATH = (
-    "backend/data/faculty_ids.json"
+FACULTY_JSON_PATH = os.path.join(
+    DATA_DIR,
+    "faculty_ids.json"
 )
 
 with open(
-        FACULTY_JSON_PATH,
-        "r",
-        encoding="utf-8"
+    FACULTY_JSON_PATH,
+    "r",
+    encoding="utf-8"
 ) as file:
 
     faculty_profiles = json.load(file)
@@ -34,19 +47,31 @@ with open(
 # =====================================================
 
 faculty_excel = pd.read_excel(
-    "backend/data/clean_publications.xlsx"
+    os.path.join(
+        DATA_DIR,
+        "clean_publications.xlsx"
+    )
 )
 
 student_excel = pd.read_excel(
-    "backend/data/Student publication 2021 to 2026.xlsx"
+    os.path.join(
+        DATA_DIR,
+        "Student publication 2021 to 2026.xlsx"
+    )
 )
 
 patent_excel = pd.read_excel(
-    "backend/data/patents2021 to 2026.xlsx"
+    os.path.join(
+        DATA_DIR,
+        "patents2021 to 2026.xlsx"
+    )
 )
 
 quartile_excel = pd.read_excel(
-    "backend/data/q1 to q4 year 2021 to 2026.xlsx"
+    os.path.join(
+        DATA_DIR,
+        "q1 to q4 year 2021 to 2026.xlsx"
+    )
 )
 
 faculty_excel.fillna("", inplace=True)
