@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Research Dashboard"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:textColor="#512DA8"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Faculty Search"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/facultySearchBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Faculty Name"/>
+
+        <Button
+            android:id="@+id/facultySearchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEARCH FACULTY"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ORCID Search"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/orcidSearchBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter ORCID ID"/>
+
+        <Button
+            android:id="@+id/orcidSearchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEARCH ORCID"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publication Search"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/publicationSearchBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Keyword / Publication Title"/>
+
+        <Button
+            android:id="@+id/publicationSearchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEARCH PUBLICATIONS"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Author"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="14dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/authorRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Faculty Name"
+            android:textColor="#303F9F"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/affiliationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Affiliation"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="14dp"
+                android:layout_margin="4dp">
+
+                <TextView
+                    android:id="@+id/citationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Citations"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="14dp"
+                android:layout_margin="4dp">
+
+                <TextView
+                    android:id="@+id/hindexText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="H Index"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="14dp"
+                android:layout_margin="4dp">
+
+                <TextView
+                    android:id="@+id/i10Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="I10 Index"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Research Analytics"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="12dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/analyticsCard"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊 Analytics"
+                    android:textSize="26sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Click Here To View Analytics"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
