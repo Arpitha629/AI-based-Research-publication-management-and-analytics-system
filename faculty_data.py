@@ -160,5 +160,131 @@ faculty_profiles = {
 
         "wos":
             ""
+    },
+
+    "Vinayak Uppin": {
+
+        "orcid":
+            "",
+
+        "scopus":
+            "",
+
+        "ieee":
+            "",
+
+        "researchgate":
+            "",
+
+        "wos":
+            ""
+    },
+
+    "Suman Dey, Ph.D.": {
+
+        "orcid":
+            "",
+
+        "scopus":
+            "",
+
+        "ieee":
+            "",
+
+        "researchgate":
+            "",
+
+        "wos":
+            ""
+    },
+
+    "Dr. Prathik S Jain": {
+
+        "orcid":
+            "",
+
+        "scopus":
+            "",
+
+        "ieee":
+            "",
+
+        "researchgate":
+            "",
+
+        "wos":
+            ""
+    },
+
+    "Sundaramahalingam A": {
+
+        "orcid":
+            "",
+
+        "scopus":
+            "",
+
+        "ieee":
+            "",
+
+        "researchgate":
+            "",
+
+        "wos":
+            ""
+    },
+
+    "Dr. Hareesha NG, Ph.D": {
+
+        "orcid":
+            "",
+
+        "scopus":
+            "",
+
+        "ieee":
+            "",
+
+        "researchgate":
+            "",
+
+        "wos":
+            ""
+    },
+
+    "Afreen Nizami": {
+
+        "orcid":
+            "",
+
+        "scopus":
+            "",
+
+        "ieee":
+            "",
+
+        "researchgate":
+            "",
+
+        "wos":
+            ""
+    },
+
+    "Dr. P S Shivakumar Gouda": {
+
+        "orcid":
+            "",
+
+        "scopus":
+            "",
+
+        "ieee":
+            "",
+
+        "researchgate":
+            "",
+
+        "wos":
+            ""
     }
 }
